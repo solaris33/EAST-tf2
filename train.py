@@ -84,7 +84,7 @@ def main(_):
   # set tensorboard summary writer
   summary_writer = tf.summary.create_file_writer(FLAGS.checkpoint_path + '/train')
 
-  for step in range(FLAGS.max_steps):
+  while int(ckpt.step) < (FLAGS.max_steps + 1):
     # load data
     [input_images, overly_small_text_region_training_masks, text_region_boundary_training_masks, score_maps], \
     [target_score_maps, target_geo_maps] = next(train_data_generator)
