@@ -64,6 +64,17 @@ The images you want to detect have to be in one directory, whose path you have t
 python3 eval.py --gpu_num=1 --test_data_path=./data/ICDAR2015/test_data --model_path=./east_resnet_50_rbox/ --output_dir=./data/ICDAR2015/test_data_output/
 ```
 
+### Detection examples
+![image_1](examples/img_10.jpg)
+![image_2](examples/img_12.jpg)
+![image_3](examples/img_13.jpg)
+![image_4](examples/img_14.jpg)
+![image_5](examples/img_15.jpg)
+![image_6](examples/img_26.jpg)
+![image_7](examples/img_28.jpg)
+![image_8](examples/img_29.jpg)
+![image_9](examples/img_75.jpg)
+
 ### Reference
 - [kurapan's Keras EAST Implementation](https://github.com/kurapan/EAST)
 - [argman's TensorFlow1 EAST Implementation](https://github.com/argman/EAST)
