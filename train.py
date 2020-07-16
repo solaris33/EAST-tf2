@@ -110,7 +110,7 @@ def main(_):
 
     print('Step {:06d}, dice_loss {:.4f}, rbox_loss {:.4f}, total_loss {:.4f}'.format(int(ckpt.step), _dice_loss, _rbox_loss, loss))
 
-    if step % FLAGS.save_checkpoint_steps == 0:
+    if ckpt.step % FLAGS.save_checkpoint_steps == 0:
       # save checkpoint
       ckpt_manager.save(checkpoint_number=ckpt.step)
       print('global_step : {}, checkpoint is saved!'.format(int(ckpt.step)))
