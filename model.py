@@ -62,7 +62,7 @@ class EAST_model(tf.keras.Model):
     angle_map = tf.keras.layers.Lambda(lambda x: (x - 0.5) * np.pi / 2)(angle_map)
     pred_geo_map = tf.keras.layers.concatenate([rbox_geo_map, angle_map], axis=3, name='pred_geo_map')
 
-    model = tf.keras.models.Model(inputs=[input_image, overly_small_text_region_training_mask, text_region_boundary_training_mask, target_score_map], outputs=[pred_score_map, pred_geo_map])
+    model = tf.keras.models.Model(inputs=[input_image], outputs=[pred_score_map, pred_geo_map])
 
     self.model = model
     self.input_image = input_image
